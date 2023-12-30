@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% load static %} {% block head_title %}Library
+Management System{% endblock %} {% block content %}
+
+{% comment %}====================== Home Page Left Side======================= {% endcomment %}
+<div
+  class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
+  <div
+    class="flex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6 bg-white rounded-2xl bg-opacity-70 mx-3">
+    <h1 class="font-bold text-4xl my-4">Welcome to PATHAGAR</h1>
+    <p class="leading-normal mb-4">
+      A school library plays a crucial role in supporting the educational goals
+      of an institution. It serves as a resource hub where students and teachers
+      can access a wide range of books, reference materials, and digital
+      resources. School libraries contribute to the academic development of
+      students by fostering a reading culture, promoting research skills, and
+      providing a quiet space for study.
+    </p>
+  </div>
+
+{% comment %}====================== Home Page Right Side======================{% endcomment %}
+  <div class="w-full lg:w-1/2 lg:py-6 text-center">
+    <img
+      class="rounded-2xl w-full"
+      src="{% static './img/library-image.avif' %}"
+    />
+  </div>
+</div>
+
+{% endblock %}
