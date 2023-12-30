@@ -7,7 +7,7 @@ from Library.models import BookModel
 class UserAccountModel(models.Model):
     user = models.OneToOneField(User, related_name='account', on_delete=models.CASCADE)
     account_no = models.IntegerField(unique=True)
-    balance = models.DecimalField(default=0, max_length=12, max_digits=100000, decimal_places=2)
+    balance = models.DecimalField(default=0, max_length=12, max_digits=15, decimal_places=2)
     
     def __str__(self):
         return str(self.account_no)

@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-# import dj_database_url
+import dj_database_url
 import environ
 env = environ.Env()
 environ.Env.read_env()
@@ -93,10 +93,12 @@ DATABASES = {
 }
 
 
+
+
 # DATABASES = {
 #     'default': dj_database_url.config(
 #         # Feel free to alter this value to suit your needs.
-#         default='postgres://library_management_xb3g_user:aCPp8c0dBEXSDzlIjdgMFNfi7sh0Hfzm@dpg-cm81iuun7f5s73dc196g-a.oregon-postgres.render.com/library_management_xb3g',
+#         default='postgres://library_management_t3k9_user:gc3Tzu3Gghdhy9Jr1NY5c15Eox4eMAs3@dpg-cm82dkocmk4c738vve8g-a.oregon-postgres.render.com/library_management_t3k9',
         
 #     )
 # }
