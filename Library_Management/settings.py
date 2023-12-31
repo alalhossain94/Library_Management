@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import dj_database_url
+# import dj_database_url
 import environ
 env = environ.Env()
 environ.Env.read_env()
@@ -88,12 +88,12 @@ WSGI_APPLICATION = 'Library_Management.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # DATABASES = {
@@ -109,13 +109,13 @@ WSGI_APPLICATION = 'Library_Management.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.config(
-        # Feel free to alter this value to suit your needs.
-        default='postgres://library_management_u6t3_user:C9rQOzRCDMYHV9jg7ZM9SqjSfr87OfKe@dpg-cm8iaumn7f5s73cfm120-a.oregon-postgres.render.com/library_management_u6t3',
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Feel free to alter this value to suit your needs.
+#         default='postgres://library_management_u6t3_user:C9rQOzRCDMYHV9jg7ZM9SqjSfr87OfKe@dpg-cm8iaumn7f5s73cfm120-a.oregon-postgres.render.com/library_management_u6t3',
 
-    )
-}
+#     )
+# }
 
 
 
