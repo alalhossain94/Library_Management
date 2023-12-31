@@ -109,30 +109,15 @@ WSGI_APPLICATION = 'Library_Management.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         # Feel free to alter this value to suit your needs.
-#         default='postgres://library_management_u6t3_user:C9rQOzRCDMYHV9jg7ZM9SqjSfr87OfKe@dpg-cm8iaumn7f5s73cfm120-a.oregon-postgres.render.com/library_management_u6t3',
-
-#     )
-# }
-
-import os
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get("DB_NAME"),
-        'USER': os.environ.get("DB_USER"),
-        'PASSWORD': os.environ.get("DB_PASSWORD"),
-        'HOST': os.environ.get("DB_HOST"),
-        'PORT': os.environ.get("DB_PORT"),
-    }
+    'default': dj_database_url.config(
+        # Feel free to alter this value to suit your needs.
+        default='postgres://library_management_u6t3_user:C9rQOzRCDMYHV9jg7ZM9SqjSfr87OfKe@dpg-cm8iaumn7f5s73cfm120-a.oregon-postgres.render.com/library_management_u6t3',
+
+    )
 }
+
+
 
 
 
