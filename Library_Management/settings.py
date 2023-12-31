@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-# import dj_database_url
+import dj_database_url
 import environ
 env = environ.Env()
 environ.Env.read_env()
@@ -86,23 +86,22 @@ WSGI_APPLICATION = 'Library_Management.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
-
-
 # DATABASES = {
-#     'default': dj_database_url.config(
-#         # Feel free to alter this value to suit your needs.
-#         default='postgres://library_management_t3k9_user:gc3Tzu3Gghdhy9Jr1NY5c15Eox4eMAs3@dpg-cm82dkocmk4c738vve8g-a.oregon-postgres.render.com/library_management_t3k9',
-        
-#     )
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
 # }
+
+
+
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default='postgres://library_management_av2i_user:SacPpVVTRq2IXlg8esr205p8gZnEDZJ0@dpg-cm8fgrnqd2ns73dh09bg-a.oregon-postgres.render.com/library_management_av2i',
+        
+    )
+}
 
 
 # Password validation
